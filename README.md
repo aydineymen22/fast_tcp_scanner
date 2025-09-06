@@ -26,39 +26,38 @@ It is similar in concept to `nmap -p- -T4`, but implemented with Python’s `soc
 ## 🚀 Installation
 Clone this repo and run with Python 3:
 
-```bash
 git clone https://github.com/yourname/fast-scanner.git
 cd fast-scanner
 No extra dependencies required (only Python standard library).
 
 ▶️ Usage
 Basic scan (default 1–1024 ports):
-bash
-Copy code
+
+
 python3 fast_scanner.py -t 127.0.0.1
 Scan specific port range:
-bash
-Copy code
+
+
 python3 fast_scanner.py -t 192.168.1.10 -p 20-100
 Scan mixed list of ports:
-bash
-Copy code
+
+
 python3 fast_scanner.py -t scanme.nmap.org -p 22,80,443,8000-8100
 Increase threads & decrease timeout (faster scan):
-bash
-Copy code
+
+
 python3 fast_scanner.py -t 192.168.1.10 -p 1-65535 -n 300 -to 0.3
 Save results to a file:
-bash
-Copy code
+
+
 python3 fast_scanner.py -t 192.168.1.10 -p 1-1024 -o results.txt
 Attempt banner grabbing:
-bash
-Copy code
+
+
 python3 fast_scanner.py -t 192.168.1.10 -p 21,22,25,80,443 -b
 📝 Example Output
 sql
-Copy code
+
 [+] Scanning scanme.nmap.org (45.33.32.156) for 1024 ports with 200 threads...
 
 [+] Open ports on scanme.nmap.org:
